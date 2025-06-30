@@ -96,32 +96,6 @@ const Paste = () => {
                           size={20}
                         />
                       </button>
-
-                      <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-red-500"
-                        onClick={async () => {
-                          const title = "Check this out!";
-                          const url = window.location.href;
-
-                          if (navigator.share) {
-                            try {
-                              await navigator.share({ title, url });
-                              toast.success("Shared successfully!");
-                            } catch (error) {
-                              toast.error("Sharing failed:", error);
-                            }
-                          } else {
-                            alert(
-                              "Web Share API is not supported in your browser."
-                            );
-                          }
-                        }}
-                      >
-                        <Share
-                          className="text-black group-hover:text-red-500"
-                          size={20}
-                        />
-                      </button>
                     </div>
 
                     <div className="gap-x-2 flex ">
